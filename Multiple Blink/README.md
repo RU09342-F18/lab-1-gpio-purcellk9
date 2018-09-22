@@ -1,22 +1,10 @@
-# Multiple Blink
-Now that we have blinked at least 1 LED, what about blinking multiple LEDS at the same time? The minimum that you need to develop is blinking at least two LEDs at two different rates. Although I am not going to give you a speed, you should probably pick a rate which is visible to a standard human. I really hope that you take this further and perform some of the extra work for this part of the lab exercise.
-
-
-# YOU NEED TO CREATE THE FOLLOWING FOLDERS
-* MSP430G2553
-* MSP(FILL IN WITH WHAT YOU ARE USING)
-
-## README
-Remember to replace this README with your README once you are ready to submit. I would recommend either making a copy of this file or taking a screen shot. There might be a copy of all of these README's in a folder on the top level depending on the exercise.
-
-## Extra Work
-When you take a look at the development boards, you are limited to what is built into the platform.
-
-### Even More LEDs
-Since up to this point you should have hopefully noticed that you are simply just controlling each pin on your processor. So... what is keeping you from putting an LED on each pin? Can you actually control the speed of each of these LEDs?
-
-### Patterned Lights
-If you can control a ton of LEDs, what is keeping you from having a little fun? Why not try and make something like a moving face or other moving object in lights. *CAUTION* I would only do this if you have finished the rest of the lab.
-
-### UART Pattern Control
-If you have been using UART, could you set which LEDs are on or off based off some UART command? Would you want to send an Array over UART such as [1 0 1 0] or would you want to send a byte that corresponds to the status? Can you not only say which LEDs are on, but also tell them to blink at a particular rate if they were on (so LED1 Blink every 100ms)?
+# Embedded Systems Lab 1: Button Blick 
+Kevin Purcell
+Embedded systems section 4
+September 21, 2018
+# Functionality
+The main function of these programs is to demonstrate the use and implementation of multiple LEDs toggling at different speeds on the microprocessors. Using the MSP430G2553 and the MSP430FR2311 microprocessors, we were able to toggle two different LEDs at varying speeds through implementing the code written in order to control the state of the LED.
+# Valid INputs/Ouputs
+In order to successfully understand this program, both the MSP430G2553 and MSP430FR2311 share integers A, B, and X which are used as inputs. The MSP430G2553 used port 1.0 and port 1.6 configured to the LEDs, while the button was configured to port 1.3. Similarly, the MSP430FR2311 used port 1.0 for the initial LED, but port 2.0 was configured to the second. IN this case the button was configured to port 1.1 of the microprocessor. 
+# Description of Code
+The code works while within the infinite while loop where if A is great than or equal to 10 (one half of X), LED 1 will blink and then A will be reset to 0. While for LED 2, if B is great than or equal to 20 (X), LED 2 will blink and then B will be reset to 0.
