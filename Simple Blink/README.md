@@ -1,4 +1,4 @@
-# Embedded Systems Lab 1: Button Blick 
+# Embedded Systems Lab 1: Simple Blick 
 Kevin Purcell
 Embedded systems section 4
 September 21, 2018
