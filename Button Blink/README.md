@@ -1,18 +1,10 @@
-# Button Blink
-Now that you have looked at blinking the LED from some built in delay, but what if we wanted to control the state of the LED by a button? You may think "Why would I need a Microcontroller to perform the job of a switch?". And that is where you come in. The bare minimum for this part of the lab is to essentially replicate a switch with your development board.
-
-# YOU NEED TO CREATE THE FOLLOWING FOLDERS
-* MSP430G2553
-* MSP(FILL IN THE PROCESSOR YOU ARE USING)
-
-## README
-Remember to replace this README with your README once you are ready to submit. I would recommend either making a copy of this file or taking a screen shot. There might be a copy of all of these README's in a folder on the top level depending on the exercise. Make sure you talk about how your button is configured (momentary or continuous. Normally open or closed. Does the button press indicate when the LED should be on or off.)
-
-## Extra Work
-What can we do to make this a little bit more worthy of needing a microcontroller.
-
-### Button Based Speed Control
-Much like the UART controlled speed, what if you could cycle between speeds based on a button press? The speed could progress through a cycle of "Off-Slow-Medium-Fast" looping back when you hit the end.
-
-### Color Change
-What if upon a button press, the LED which was blinking changed. Some of the development boards contain two LEDs, so you could swap between a Red and a Green LED.
+# Embedded Systems Lab 1: Button Blick 
+Kevin Purcell
+Embedded systems section 4
+September 21, 2018
+# Functionality
+The main function of these programs is to demonstrate the use and implementation of a button on the microprocessors. Using the MSP430G2553 and the MSP430FR2311 microprocessors, we were able to toggle the LED when the button was pressed in order to control the state of the LED.
+# Valid INputs/Ouputs
+In order to successfully understand this program, for the MSP430G2553 port 1.0 is configured to an LED and port 1.3 is configured to a button. For the MSP430FR2311 port 1.0 is configured to the LED again, however the button is configured to port 1.4.
+# Description of Code
+Both codes work in the same way where the button on either microprocessor is pushed and the LED will toggle. If the button is pushed again it will reset the LED and turn it off.  However, when if the button is not pressed to reset the LED, the LED will continue to toggle until the delay runs.
